@@ -11,10 +11,10 @@ from mpl_toolkits.basemap import Basemap
 filename = "pollutiondata2.csv"
 shapefile2= "countries.shp"
 shapefile= "countries"
-colors = 10
+colors = 11
 cols = ['Country Name', 'Country Code', 'Waste']
-title = "Plastics Waste Produced In 2016 (Tons)"
-imgfile = 'img/map.png'
+title = "Plastics Waste Produced In 2016 (Million Tons)"
+imgfile = 'img/map2.png'
 
 gc = GeonamesCache()
 iso3_codes = list(gc.get_dataset_by_key(gc.get_countries(), 'iso3').keys())
@@ -60,7 +60,7 @@ ax.axhspan(0, 1000 * 1800, facecolor='w', edgecolor='w', zorder=2)
 ax_legend = fig.add_axes([0.35, 0.14, 0.3, 0.03], zorder=3)
 cmap = mpl.colors.ListedColormap(scheme)
 print(bins)
-cb = mpl.colorbar.ColorbarBase(ax_legend, cmap=cmap, ticks=bins, boundaries=bins, orientation='horizontal')
+cb = mpl.colorbar.ColorbarBase(ax_legend, cmap=cm, orientation='horizontal')
 #cb = mpl.colorbar.ColorbarBase(ax_legend, cmap=cmap, orientation='horizontal')
 
 cb.ax.set_xticklabels([str(round(i, 1)) for i in bins])
