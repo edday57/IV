@@ -64,7 +64,7 @@ margin: 20px auto 20px auto;
 }
 .centered2{
   text-align: center;
-  margin: 200px auto 0 auto;
+  margin: 20px auto 0 auto;
 }
 .button{
   padding: 20px;
@@ -94,6 +94,9 @@ p{
   color: hsl(214, 17%, 51%);
   font-size: auto;
   font-weight: 500;
+}
+.consent{
+  margin: 0 25px;
 }
 .name{
 color: hsl(217, 19%, 35%);

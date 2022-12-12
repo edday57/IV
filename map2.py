@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import geopandas as gpd
-
+from sctriangulate.colors import build_custom_continuous_cmap
 from geonamescache import GeonamesCache
 from matplotlib.patches import Polygon
 from matplotlib.collections import PatchCollection
@@ -25,7 +25,8 @@ df = pd.read_csv(filename, usecols=cols)
 df.set_index('Country Code', inplace=True)
 #df = df.loc[iso3_codes].dropna()
 values = df["Waste"]
-cm = plt.get_cmap('summer')
+cm = build_custom_continuous_cmap([255,162,162],[111,0,0])
+#cm = plt.get_cmap('summer')
 scheme = [cm(i / colors) for i in range(colors)]
 bins = np.linspace(values.min(), values.max(), colors)
 df['bin'] = np.digitize(values, bins) - 1
@@ -60,8 +61,8 @@ ax.axhspan(0, 1000 * 1800, facecolor='w', edgecolor='w', zorder=2)
 ax_legend = fig.add_axes([0.2, 0.14, 0.6, 0.03], zorder=3)
 cmap = mpl.colors.ListedColormap(scheme)
 print(bins)
-#cb = mpl.colorbar.ColorbarBase(ax_legend, cmap=cm, ticks=bins, boundaries=bins, orientation='horizontal')
-cb = mpl.colorbar.ColorbarBase(ax_legend, cmap=cm, orientation='horizontal')
+cb = mpl.colorbar.ColorbarBase(ax_legend, cmap=cm, ticks=bins, boundaries=bins, orientation='horizontal')
+#cb = mpl.colorbar.ColorbarBase(ax_legend, cmap=cm, orientation='horizontal')
 
 cb.ax.set_xticklabels([str(round(i, 1)) for i in bins])
 plt.xticks(fontsize=20)
