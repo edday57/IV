@@ -25,7 +25,7 @@ df = pd.read_csv(filename, usecols=cols)
 df.set_index('Country Code', inplace=True)
 #df = df.loc[iso3_codes].dropna()
 values = df["Waste"]
-cm = plt.get_cmap('Greens')
+cm = plt.get_cmap('summer')
 scheme = [cm(i / colors) for i in range(colors)]
 bins = np.linspace(values.min(), values.max(), colors)
 df['bin'] = np.digitize(values, bins) - 1
@@ -57,13 +57,14 @@ for info, shape in zip(m.units_info, m.units):
 ax.axhspan(0, 1000 * 1800, facecolor='w', edgecolor='w', zorder=2)
 
 # Draw color legend.
-ax_legend = fig.add_axes([0.35, 0.14, 0.3, 0.03], zorder=3)
+ax_legend = fig.add_axes([0.2, 0.14, 0.6, 0.03], zorder=3)
 cmap = mpl.colors.ListedColormap(scheme)
 print(bins)
+#cb = mpl.colorbar.ColorbarBase(ax_legend, cmap=cm, ticks=bins, boundaries=bins, orientation='horizontal')
 cb = mpl.colorbar.ColorbarBase(ax_legend, cmap=cm, orientation='horizontal')
-#cb = mpl.colorbar.ColorbarBase(ax_legend, cmap=cmap, orientation='horizontal')
 
 cb.ax.set_xticklabels([str(round(i, 1)) for i in bins])
+plt.xticks(fontsize=20)
 
 # Set the map footer.
 

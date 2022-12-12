@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Manrope', sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  align-items: center;
+  min-height: 100vh;
+}
+img{
+  height: 600px;
+  margin: 0px auto 0px auto;
+  display: flex;
+}
+.maincontainer{
+  border-radius: 10px;
+  background-color: white;
+  width: 50%;
+  max-height: 400px;
+  min-width: 600px;
+  margin: 20px auto 20px auto;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px 0.8;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.key{
+  border-radius: 10px;
+  background-color: gray;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  display: inline;
+  box-shadow: 10px 10px 10px 0.8;
+}
+.articlecontainer{
+  width: 60%;
+  height: 100%;
+}
+h1{
+  color: hsl(217, 19%, 35%);
+  font-size: 2em;
+  text-align: center;
+  margin:20px;
+  height: 25%;
+  display: inline-block;
+}
+form{
+  font-size: 1rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  padding: 20px;
+}
+.centered {
+display: flex;
+justify-content: center;
+border-radius: 10px;
+background-color: white;
+box-shadow: 10px 10px 10px 0.8;
+width: 30%;
+margin: 20px auto 20px auto;
+}
+.centered2{
+  text-align: center;
+  margin: 200px auto 0 auto;
+}
+.button{
+  padding: 20px;
+  background-color: lightgray;
+  margin: 10px 20px;
+  border-radius: 10px;
+}
+p{
+  color: hsl(217, 19%, 35%);
+  font-size: 2em;
+  text-align: center;
+  font-weight: 700;
+}
+.previewimg{
+  width: 100%;
+  height: 100%;
+}
+.aviimg{
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+  margin-right: 20px;
+  float: left;
+}
+.articletext{
+  margin: 20px;
+  color: hsl(214, 17%, 51%);
+  font-size: auto;
+  font-weight: 500;
+}
+.name{
+color: hsl(217, 19%, 35%);
+display: inline-block;
+width: 45%;
+}
+.date{
+color: hsl(212, 23%, 69%);
+display: inline-block;
+width: 45%;
+}
+.sharebtn{
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+  background-color: hsl(217, 19%, 35%);
+  position: absolute;
+  right:0px;
+  top: 0px;
+
+}
+.sharecontainer{
+  margin: 20px;
+  position: relative;
+}
+.sharebtn img{
+  fill: white;
+  margin:auto;
+}

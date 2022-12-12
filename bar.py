@@ -9,9 +9,9 @@ import numpy as np
 
 fig, ax = plt.subplots(figsize=(22, 12))
 # top 10 countries
-countries = ["Australia", "Brazil", "China", "Japan", "Libya", "Mexico", "Namibia", "North America", "Russia", "Saudi Arabia"]
+countries = ["Australia", "Brazil", "China", "Mexico", "Namibia", "USA", "Russia", "Saudi Arabia"]
 # total million tons 2016
-pollution = [6.47, 45.1, 21.6, 14.2, 28.33, 12, 5.9, 26, 2, 18.9]
+pollution = [6.47, 45.1, 21.6, 14.2, 28.33, 26, 2, 18.9]
 
 
 ax.bar(countries, pollution)
@@ -21,6 +21,6 @@ plt.rc('font', size=30)
 plt.xticks(fontsize=20, rotation=45)
 plt.yticks(fontsize=20)
 plt.title("Plastics Waste Produced In 2016 (Million Tons)",fontsize=30,fontweight="bold")
-plt.savefig('1.png')
+plt.savefig('0.png')
 plt.show()
 
